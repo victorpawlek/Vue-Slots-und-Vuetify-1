@@ -1,32 +1,26 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+  <div style="display:flex">
+    <Sheet style="margin-left:20px">
+      <h3>Memo to myself</h3>
+      <p>Always prepare for PLFs in time!</p>
+      <img src="info.svg" width="80px" />
+    </Sheet>
+    <Sheet style="margin-left:20px">
+      <p>INSY, SEW and Webtechnologies are our favorite subjects!</p>
+      <span style="font-style: italic">Starkschwitz Fiedler, Jan Schreck</span>
+      <p>Wish i was there!</p>
+      <span style="font-style: italic">E. Wahn</span>
+    </Sheet>
   </div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import Sheet from '@/components/Sheet.vue';
+export default {
+  components: {
+    Sheet,
+  },
+};
+</script>
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+<style lang="scss" scoped></style>
